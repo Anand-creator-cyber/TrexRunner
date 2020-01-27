@@ -74,19 +74,30 @@ function draw() {
 
     trex.velocityY = trex.velocityY + 0.4;
     
-      if (keyDown("space")) {
+      if (keyDown("space") && trex.y >= 159) {
     trex.velocityY = -7;
+        jumpSound.play();
     }
     
       trex.collide(invisible_g);
     
      score = score + Math.round(getFrameRate() / 60);
+     if(score % 100 === 0 && score > 0) {
+     
+       checkPointSound.play();
+     }
     
     if(obstacle_grp.isTouching(trex)) {
        
        gameState = END;
+      
+       dieSound.play();
        
        }
+    
+ 
+    
+    
  }
   
   else if(gameState === END) {
