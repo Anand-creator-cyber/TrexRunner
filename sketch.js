@@ -77,7 +77,7 @@ function draw() {
     
       if (keyDown("space") && trex.y >= 159) {
     trex.velocityY = -7;
-        jumpSound.play();
+       // jumpSound.play();
     }
     
       trex.collide(invisible_g);
@@ -85,14 +85,14 @@ function draw() {
      score = score + Math.round(getFrameRate() / 60);
      if(score % 100 === 0 && score > 0) {
      
-       checkPointSound.play();
+      // checkPointSound.play();
      }
     
     if(obstacle_grp.isTouching(trex)) {
        
        gameState = END;
       
-       dieSound.play();
+      // dieSound.play();
        
        }
     
