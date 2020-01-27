@@ -5,6 +5,7 @@ var obstacle_grp, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacl
 var score = 0;
 var PLAY = 1;
 var END = 0;
+
 var gameState = PLAY;
 var gameOver, gameOver_img;
 var restart, restart_img;
